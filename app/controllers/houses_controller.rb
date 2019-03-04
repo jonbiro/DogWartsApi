@@ -14,15 +14,15 @@ class HousesController < ApplicationController
   end
 
   # POST /houses
-  def create
-    @house = House.new(house_params)
-
-    if @house.save
-      render json: @house, status: :created, location: @house
-    else
-      render json: @house.errors, status: :unprocessable_entity
-    end
-  end
+  # def create
+  #   @house = House.new(house_params)
+  #
+  #   if @house.save
+  #     render json: @house, status: :created, location: @house
+  #   else
+  #     render json: @house.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /houses/1
   def update

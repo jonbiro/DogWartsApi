@@ -19,7 +19,7 @@ gem 'puma', '~> 3.11'
 # gem 'jsonapi-rails'
 # gem 'jwt', '~> 2.1'
 # gem 'toastr-rails'
-
+gem 'active_model_serializers'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
