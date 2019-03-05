@@ -1,3 +1,4 @@
+
 class PuppiesController < ApplicationController
   before_action :set_puppy, only: [:show, :update, :destroy]
 
@@ -15,6 +16,7 @@ class PuppiesController < ApplicationController
 
   # POST /puppies
   def create
+    # byebug
     @puppy = Puppy.new(puppy_params)
 
     if @puppy.save
@@ -26,6 +28,7 @@ class PuppiesController < ApplicationController
 
   # PATCH/PUT /puppies/1
   def update
+
     if @puppy.update(puppy_params)
       render json: @puppy
     else
@@ -46,6 +49,6 @@ class PuppiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def puppy_params
-      params.require(:puppy).permit(:name, :house)
+      params.permit(:name, :house_id, :image1, :image2, :age)
     end
 end
